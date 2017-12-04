@@ -8,6 +8,3 @@ ENV DB db
 ENV SERVICE_NAME go-demo
 CMD ["go-demo"]
 HEALTHCHECK --interval=10s CMD wget -qO- localhost:8080/demo/hello
-
-COPY go-demo /usr/local/bin/go-demo
-RUN chmod +x /usr/local/bin/go-demo
